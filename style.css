@@ -1,0 +1,912 @@
+/*Feuille de Style Projet Webagency*/
+/*Polices*/
+
+@font-face { /*Police Glyphicons Halflings Regular*/
+	font-family: 'glyphicons-halflings';
+	src: url('/fonts/glyphicons-halflings-regular.eot') format('eot'),
+		 url('/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+		 url('/fonts/glyphicons-halflings-regular.svg') format('svg'),
+		 url('/fonts/glyphicons-halflings-regular.woff') format('woff');
+}
+
+/*apparence générale*/
+
+body {
+	background-color: #ffffff;
+	padding: 0px;
+}
+
+h1 {
+	font-family: 'roboto', arial black, serif, impact;
+	font-weight: 1000;
+	font-size: 1.8em;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: 'roboto', arial black, serif, impact;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+p {
+	font-family: 'roboto', arial, serif, impact;
+	font-size: 0.8em;
+}
+
+#sections {
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+.section {
+	margin-top: 10px;
+}
+
+/*en-tête des sections*/
+
+.marge_top {
+	margin-top: 10px;
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 110px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.section {
+	position: relative;
+	top: 120px;
+	margin-top: -120px;
+	margin-bottom: -120px;
+}
+
+.title {
+	width: 40%;
+	margin: auto;
+	text-align: center;
+}
+
+.bordure_titre {
+	width: 15%;
+	margin: auto;
+	height: 10px;
+	border-top: 0.3px solid #ebebeb;
+	position:relative;
+}
+
+
+.petit_cercle_title {
+	background:#5cadd3;
+	border-radius:50%;
+	width:12px;
+	height:12px;
+	border:6px solid #fff; 
+	position: absolute;
+	top: -13px;
+	left: 38%;
+	right: 42%;
+}
+/*-----------------------------------------------------------------------*/
+/*header*/
+
+.logo_nav { /*logo et navigation*/
+	position: fixed;
+	z-index: 1000;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 100px;
+	width:100%;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-around;
+}
+
+.logo_nav img {
+	height: 55px;
+	padding-top: 20px;
+}
+
+nav table { /*style de la navigation*/
+	height: 100px;
+	width: 20%;
+	margin-top: 0px;
+}
+
+nav table tr td {
+	padding-right: 15px;
+	padding-left: 15px;
+	width: 25%;
+	height: 100%;
+	vertical-align: middle;
+	border: 3px solid white;
+}
+
+nav table tr td a {
+	font-family: 'roboto', arial, serif, impact;
+	font-size: 0.8em;
+	color: #000;
+	text-decoration: none;
+}
+
+nav table tr td:hover { /*changement de bordure au survol*/
+	border-top: 3px solid #5cadd3;
+}
+
+#menu_responsive {
+		display: none;
+	} 
+
+
+/*-----------------------------------------------------------------------*/
+/*section slider*/
+
+#slideshow {
+	position: relative;
+	z-index:0;
+	width: 100%;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 555px;
+	margin-bottom: 20px;
+}
+
+.bloc_texte { /*Texte de présentation*/
+	position: absolute;
+	z-index: 10;
+	top: 185px;
+	left: 10%;
+	width: 38%;
+	height: 170px;
+	background-color: rgba(255,255,255,0);
+	color: white;
+}
+
+.bloc_texte strong {
+	color: #5cadd3;
+}
+
+.bouton_accueil {
+	background-color: #5cadd3;
+	border-radius: 3px;
+	border-bottom: 3px solid #468cad;
+	width: 20%;
+	font-family: 'roboto', arial, serif, impact;
+	text-align: center;
+	vertical-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 25px;
+}
+
+.bouton_accueil a {
+	color: white;
+	text-decoration: none;
+	font-family: 'roboto', arial, serif, impact;
+	font-size: 0.8em;
+}
+
+
+#accueil_petitecran {
+	width: 100%;
+	max-width: 1440px;
+	display:none;	
+}
+
+.image_petitecran {
+	width: 100%;
+	max-width: 1440px;
+	z-index: 9;
+}
+
+/*Et voilà le slider !!*/
+
+
+#slideshow .container {
+	position:relative;
+	width: 100%;
+	height: 555px;
+	overflow: hidden;
+}
+
+#slideshow .container:after {
+	position: absolute;
+	bottom: 5px; left:0;
+	content: " ";
+	width: 100%;
+	height: 6px;
+	background: rgba(0,0,0,0.5);
+}
+
+#slideshow .slider {
+	position: absolute;
+	left:0; 
+	top:0;
+	width: 200%;
+	height: 555px;
+}
+
+#slideshow figure {
+	position:relative;
+	display:inline-block;
+	padding:0; 
+	margin:0;
+}
+
+
+.slider {
+	display: flex;
+}
+
+@keyframes slider { /*animation*/
+	0%, 100%		{ left: 0; }
+	55%		 		{ left: -120%; }
+}
+
+@-moz-keyframes slider { 
+	0%, 100%		{ left: 0; }
+	55%		 		{ left: -120%; }
+}
+
+@-webkit-keyframes slider { 
+	0%, 100%		{ left: 0; }
+	55%		 		{ left: -120%; }
+}
+
+#slideshow .slider {
+	animation: slider 10s cubic-bezier(.25,.1,0,1.01) infinite;
+}
+
+#timeline {
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+	bottom: 5px;
+	left: 0px;
+	height: 6px;
+	background: rgb(92,173,211);
+	background: rgba(92,173,211,1);
+	width: 140px;
+	/* fonction d'animation */
+	animation: timeliner 10s cubic-bezier(.25,.1,0,1.01) infinite;
+}
+
+@keyframes timeliner {
+	0%, 100%	{ transform: translateX(0px); }
+	55%		{ transform: translateX(140px);	}
+	100%		{ transform: translateX(0px);	}
+}
+
+@-moz-keyframes timeliner {
+	0%, 100%	{ transform: translateX(0px); }
+	55%		{ transform: translateX(140px);	}
+	100%		{ transform: translateX(0px);	}
+}
+
+@-webkit-keyframes timeliner {
+	0%, 100%	{ transform: translateX(0px); }
+	55%		{ transform: translateX(140px);	}
+	100%		{ transform: translateX(0px);	}
+}
+
+
+.command_slider_left { /*flèches de commande du slider*/
+	background: rgba(0,0,0,0.6);
+	width: 35px;
+	height: 70px;
+	border-radius: 0px 35px 35px 0px;
+	position: absolute;
+	top: 240px; left: 0px;
+	z-index: 5;
+}
+
+.command_slider_right { /*flèches de commande du slider*/
+	background: rgba(0,0,0,0.6);
+	border-radius:50%;
+	width:35px;
+	height:70px;
+	border-radius: 35px 0px 0px 35px;
+	position: absolute;
+	top: 240px; right: 0px;
+	z-index: 6;
+}
+
+.command_slider_right i {
+	color: white;
+	position: absolute;
+	top: 25px; right: 10px;
+}
+
+.command_slider_left i {
+	color: white;
+	position: absolute;
+	top: 25px; left: 10px;
+}
+
+
+/*-----------------------------------------------------------------------*/
+/*section services*/
+
+#content_services {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 80px;
+	width: 70%;
+	margin: auto;
+}
+
+#service1, #service2, #service3 {
+	display: flex;
+}
+
+#list_services {
+	padding-top: 50px;
+	margin-left:10%;
+	width: 50%;
+}
+
+.grand_cercle {
+	border-radius: 50%;
+	width: 65px;
+	height: 65px;
+	border: 1px solid #ededed;
+	position: relative;
+}
+
+.petit_cercle2 {
+	background:#5cadd3;
+	border-radius:50%;
+	width:12px;
+	height:12px;
+	border:4px solid #fff;
+	position: absolute;
+	right: -10px;
+	top: 38%;
+	bottom: 42%;
+}
+
+.grand_cercle i {
+	color: #5cadd3;
+	
+}
+
+.icone {
+	position: absolute;
+	width: 25px;
+	height: 20px;
+	top: 25%;
+	left: 22%;
+}
+
+#service3 .icone {
+	position: absolute;
+	width: 25px;
+	height: 20px;
+	top: 28%;
+	left: 28%;
+}
+
+.paragraphe {
+	width: 80%;
+	padding-left: 25px;
+}
+
+
+/*-----------------------------------------------------------------------*/
+/*section portfolio*/
+
+#portfolio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+#menu_portfolio { /*Menu section portfolio*/
+	width: 20%;
+	height: 40px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 60px;
+	border-collapse: collapse;
+	background-color: #ededed;
+	border-bottom: 5px solid #ededed;
+	border-radius: 5px;
+}
+
+#menu_portfolio tr td {
+	background-color: #ededed;
+	font-family: 'roboto', arial, serif, impact;
+	text-align: center;
+	font-size: 0.8em;
+	width: 90px;
+	height: 100%;
+	vertical-align: middle;
+	position: relative;
+}
+
+#menu_portfolio tr td:hover {
+	background-color: #5cadd3;
+	border-bottom: 5px solid #468cad;
+}
+
+
+#menu_portfolio tr td a {
+	text-decoration: none;
+	color: #000;
+}
+
+#menu_portfolio tr td:hover a {
+	color: #fff;
+}
+
+.fleche {  /*fleche vers le bas*/
+	width: 0; 
+    height: 0; 
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+     
+    border-top: 12px solid #468cad;
+	position: absolute;
+	left: 35%;
+	bottom: -12px;
+	display:none;
+}
+
+#menu_portfolio tr td:hover .fleche {
+	display: inline;
+}
+
+
+#gallery { /*Galerie*/
+	width: 80%;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+.images {
+	width: 20%;
+	position: relative;
+	margin: 30px;
+}
+
+.images img {
+	width: 100%;
+}
+
+
+.images figcaption { /*légendes des images*/
+	position: absolute;
+	bottom: 2px;
+	width: 96%;
+	height: 30%;
+	background-color: rgba(24, 24, 24, 0.6);
+	padding-left: 10px;
+	padding-bottom: 10px;
+	color: white;
+	font-size: 0.8em;
+	font-family: 'roboto', arial, serif, impact;
+	display: none;
+}
+	
+.cercle_bleu {
+	background:#5cadd3;
+	border-radius:50%;
+	width:35px;
+	height:35px;
+	border:2px solid #fff;
+	position: absolute;
+	right: 10px;
+	top: -20px;
+	bottom: 42%;	
+}
+
+.cercle_bleu i {
+	position: absolute;
+	top: 30%;
+	left: 30%;
+}
+
+.images figcaption h4 {
+	color: #fff;
+	font-weight: bold;
+	font-family: 'roboto', arial, serif, impact;
+	font-size: 0.8em;
+}
+
+.images figcaption p {
+	color: #fff;
+	font-family: 'roboto', arial, serif, impact;
+	font-size: 0.8em;
+}
+
+.images:hover figcaption {
+	display: inline;
+}
+
+/*-----------------------------------------------------------------------*/
+/*section contact*/
+
+.map {
+	position: relative;
+	z-index: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#bloc_contact {
+	position: absolute;
+	z-index: 1;
+	bottom: 45px;
+	right: 10%;
+	background-color: rgba(255,255,255,0.6);
+	height: 525px;
+	width: 25%;
+	padding-right: 20px;
+}
+
+.contenu_contact{
+	width: 85%;
+	margin: auto;
+}
+
+.entreprise {
+	font-weight: bold;
+}
+
+.tel {
+	border-bottom: 1px dashed #000;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	left: 20px;
+	right: 20px;
+}
+
+form .text, .mail, .subject, .textarea {
+	width: 100%;
+	padding-left: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: 'roboto', arial, serif, impact;
+	font-size: 0.8em;
+}
+
+.bouton {
+	background-color: #5cadd3;
+	border-radius: 3px;
+	border-bottom: 3px solid #468cad;
+	border-top: 0px;
+	border-right: 0px;
+	border-left: 0px;
+	width: 35%;
+	font-family: 'roboto', arial, serif, impact;
+	text-align: center;
+	vertical-align: center;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	color: white;
+	text-decoration: none;
+	font-family: 'roboto', arial, serif, impact;
+	font-size: 0.8em;
+	cursor: pointer;
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+
+/*Responsive*/
+
+@media screen and (max-width: 1280px) {
+
+
+		/*apparence générale*/
+	h1 {
+		font-size: 2em;
+	}
+
+	h2 {
+		font-family: 'roboto', arial black, serif, impact;
+		font-weight: bold;
+		font-size: 1.8em;
+	}
+
+	p {
+		font-family: 'roboto', arial, serif, impact;
+		font-size: 1.5em;
+	}
+	
+	.marge_top {
+		height: 170px;
+	}
+	
+	.bordure_titre {
+		width: 40%;
+	}		
+
+		/*header*/
+		
+	.logo_nav { /*logo et navigation*/
+	height: 160px;
+	}	
+	
+	.logo_nav img {
+		height: 100px;
+		padding-top: 20px;
+	}
+	#menu {
+		display: none;
+	}	
+	
+	#menu_responsive {
+		display: inline;
+	} 
+		
+	nav table { /*style de la navigation*/
+		height: 80px;
+		width: 20%;
+		margin-top: 0px;
+		position: absolute;
+		right: 20px;
+		text-align: right;
+	}
+
+	nav table tr td {
+		padding-right: 10px;
+		padding-left: 10px;
+		width: 25%;
+		height: 100%;
+		vertical-align: middle;
+		border: 3px solid white;
+	}
+	
+	nav table tr td a {
+		font-size: 1.5em;
+	}
+	
+	nav table tr td:hover { /*changement de bordure au survol*/
+		border-top: 3px solid #fff;
+		border-right: 3px solid #5cadd3;
+	}	
+
+
+		/*-----------------------------------------------------------------------*/
+		/*section accueil*/
+		
+	#slideshow {
+		display: none;
+	}
+
+	#accueil_petitecran {
+		display: inline;
+		width: 100%;
+	}
+
+
+		/*-----------------------------------------------------------------------*/
+		/*section services*/
+
+	#content_services {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 40px;
+		width: 80%;
+	}
+
+	#list_services {
+		padding-top: 50px;
+		width: 80%;
+	}
+	
+	#service1 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	
+	#service1 .grand_cercle {
+		position: relative;
+		width: 65px;
+		margin: auto;
+	}
+	
+	#service2 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	
+	#service2 .grand_cercle {
+		position: relative;
+		width: 65px;
+		margin: auto;
+	}
+	
+	#service3 {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	
+	#service3 .grand_cercle {
+		position: relative;
+		width: 65px;
+		margin: auto;
+	}	
+	
+	.icone {
+		width: 25px;
+		height: 20px;
+		margin: auto;
+	}
+
+	.paragraphe {
+		width: 100%;
+		padding-left: 25px;
+	}
+
+
+/*-----------------------------------------------------------------------*/
+/*section portfolio*/
+
+	#portfolio {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	#menu_portfolio { /*Menu section portfolio*/
+		width: 40%;
+		height: 40px;
+		margin-right: auto;
+		margin-left: auto;
+		margin-top: 60px;
+		border-collapse: collapse;
+		background-color: #ededed;
+		border-bottom: 5px solid #ededed;
+		border-radius: 5px;
+		font-size: 1.5em;
+	}
+
+	#menu_portfolio tr td {
+		width: 25%;
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.fleche {  /*fleche vers le bas*/
+		left: 37%;
+	}
+	
+	#gallery { /*Galerie*/
+	width: 80%;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+	.images {
+		width: 40%;
+		position: relative;
+		margin: 30px;
+	}
+
+
+	.images figcaption { /*légendes des images*/
+		position: absolute;
+		bottom: 4px;
+		width: 97%;
+		height: 40%;
+		font-size: 1.2em;
+	}
+
+	.cercle_bleu i {
+		position: absolute;
+		top: 25%;
+		left: 20%;
+	}
+
+
+/*-----------------------------------------------------------------------*/
+/*section contact*/
+
+	#map {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: static;
+	}
+	
+	#bloc_contact {
+		position: static;
+		background-color: #ebebeb;
+		height: 880px;
+		width: 95%;
+		margin: auto;
+		margin-top: 20px;
+		padding: 20px;
+	}
+
+	.contenu_contact{
+		width: 80%;
+		margin: auto;
+	}
+
+	.bouton {
+		width: 40%;
+		margin: auto;
+	}
+	
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------------------------------*/
+
+/*Responsive Smartphones*/
+
+@media screen and (max-width: 900px) {
+
+
+
+
+#gallery { /*Galerie*/
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		align-content: space-between;
+	}
+
+	.images {
+		width: 100%;
+		position: relative;
+		margin: 30px;
+	}
+
+	.images img {
+		width: 100%;
+	}
+
+
+	.images figcaption { /*légendes des images*/
+		position: absolute;
+		bottom: 3px;
+		width: 98.5%;
+		font-size: 1.5em;
+}
+
+	.cercle_bleu  {
+		top: -30px;
+		width: 50px;
+		height: 50px;
+		right: 15px;
+	}
+		
+	.cercle_bleu i {
+		position: absolute;
+		top: 25%;
+		left: 25%;
+	}
+
+
+}

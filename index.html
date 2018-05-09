@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8" /> 
+		<link rel="stylesheet" href="style.css" />
+		<link rel = "stylesheet" href="font–awesome.min.css" /> 
+		<script src="https://use.fontawesome.com/846ca6493d.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" />
+		<Title>WebAgency</Title>
+	</head>
+	
+	<body>
+	
+		<!--En-Tête de la page-->
+		<header>
+					
+			<div class="logo_nav"> <!--logo et navigation-->
+				<!--logo-->
+				<a href="#accueil"><img class="logo" src="images/logo.png" alt="logo WebAgency" /></a>
+				
+				<!--navigation-->
+				<nav>
+					<table id="menu">
+						<tr>
+							<td><a href="#accueil" class="interne">Accueil</a></td>
+							<td><a href="#services" class="interne">Services</a></td>
+							<td><a href="#nos_projets" class="interne">Portfolio</a></td>
+							<td><a href="#contact_info" class="interne">Contact</a></td>
+						</tr>	
+					</table>
+					
+					<table id="menu_responsive">
+						<tr>
+							<td><a href="#accueil" class="interne">Accueil</a></td>
+						</tr>
+						<tr>
+							<td><a href="#services" class="interne">Services</a></td>
+						</tr>
+						<tr>
+							<td><a href="#nos_projets" class="interne">Portfolio</a></td>
+						</tr>
+						<tr>
+							<td><a href="#contact_info" class="interne">Contact</a></td>
+						</tr>	
+					</table>
+					
+				</nav>
+			</div>
+		</header>
+		
+		<!--sections-->
+		<div id="sections">
+		
+			<!--section slider-->
+			<section class="section">
+			
+				<div id="accueil">
+					<div class="marge_top"></div>
+					
+					<div id="accueil_petitecran">
+						<img class="image_petitecran" src="images/slider/bg1.jpg" alt="creativite" />
+						<div class="bloc_texte"> <!--texte au-dessus du slider-->
+							<h1><strong>WebAgency</strong>: l'Agence de tous vos projets !</h1>
+							<p class="description">Vous avez un projet web? La WebAgency vous aide à le réaliser !</p>
+							<div class="bouton_accueil"><a href="#services">Plus d'infos</a></div>
+						</div>
+					</div>
+					
+					<div id="slideshow">
+					
+						<div class="bloc_texte"> <!--texte au-dessus du slider-->
+							<h1><strong>WebAgency</strong>: l'Agence de tous vos projets !</h1>
+							<p class="description">Vous avez un projet web? La WebAgency vous aide à le réaliser !</p>
+							<div class="bouton_accueil"><a href="#services">Plus d'infos</a></div>
+						</div>
+						
+						<!-- commandes du slider-->
+						<div class="command_slider_left">
+							<a class="fleche_previous" href="#sl_1" title="previous"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+						</div>
+						
+						<div class="command_slider_right">
+							<a class="fleche_next" href="#sl_2" title="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+						</div>
+						
+						<!--slider-->
+						<div class="container">
+						
+							<div class="c_slider"></div>
+							
+							<div class="slider">
+								
+								<figure>
+									<img id="sl_1" src="images/slider/bg1.jpg" alt="creativite" />
+								</figure>
+
+								<figure>
+									<img id="sl_2" src="images/slider/bg2.jpg" alt="communication" />
+								</figure>		
+							
+							</div>
+					
+						</div>
+					
+						<!--timeline-->
+						<span id="timeline"></span>
+					</div>	
+				
+				</div>	
+			</section>	
+
+		
+			<!--section services-->
+			<section class="section">
+				
+				<div class="marge_top">
+					<div id="services"></div>
+				</div>
+				
+				<!--titre et description-->
+				<div class="title">
+					<h1>Nos Services</h1>
+					<div class="bordure_titre"><div class="petit_cercle_title"></div></div>
+					<p>Découvrez notre expertise 100% orientée Utilisateur !</p>
+				</div>
+				
+				<!--contenu-->
+				<div id="content_services">
+					<!--image-->
+					<div id="image_services">
+						<img src="images/main-feature.png" alt="nos services" />
+					</div>
+					
+					<!--liste des services-->
+					<div id="list_services">
+					
+						<!--service 1: UX Design-->
+						<div id="service1">
+							<div class="grand_cercle">
+								<div class="icone"><i class="fa fa-line-chart fa-2x"></i></div>
+								<div class="petit_cercle2"></div>
+							</div>
+							<div class="paragraphe">
+								<h2>UX Design</h2>
+								<p class="txt_services">Ergonomie, Efficacité, Accessibilité: nos sites sont développés en totale adéquation avec les attentes et besoins de vos utilisateurs.</p>
+							</div>
+						</div>
+						
+						<!--service 2: UI Design-->
+						<div id="service2">
+							<div class="grand_cercle">
+								<div class="icone"><i class="fa fa-cubes fa-2x"></i></div>
+								<div class="petit_cercle2"></div>
+							</div>
+							<div class="paragraphe">
+								<h2>UI Design</h2>
+								<p class="txt_services">Rien n'est trop beau pour vos utilisateurs. Nos interfaces, agréables et fonctionnelles, sont pensées pour leur confort.</p>
+							</div>
+						</div>	
+						
+						<!--service 3: SEO-->
+						<div id="service3">
+							<div class="grand_cercle">
+								<div class="icone"><i class="fa fa-pie-chart fa-2x"></i></div>
+								<div class="petit_cercle2"></div>
+							</div>
+							<div class="paragraphe">
+								<h2>SEO</h2>
+								<p class="txt_services">Parce que votre site n'est pas qu'une goutte d'eau dans l'Océan du web, nous le développons dans le respect des règles de référencement. </p>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</section>
+		
+			<!--section Portfolio-->
+			<section class="section">
+			
+				<div class="marge_top">
+					<div id="nos_projets">
+					</div>
+				</div>
+				
+				<!--titre et description-->
+				<div class="title">
+					<h1>Nos Projets</h1>
+					<div class="bordure_titre"><div class="petit_cercle_title"></div></div>
+					<p>Découvrez nos réalisations !</p>
+				</div>
+				
+				<!--menu du portfolio-->
+				<table id="menu_portfolio">
+					<tr>
+						<td class="cat1"><a href="#all_works">All Works</a> <div class="fleche"></div></td>
+						<td class="cat2"><a href="#creative">Creative</a> <div class="fleche"></div></td>
+						<td class="cat3"><a href="#corporate">Corporate</a> <div class="fleche"></div></td>
+						<td class="cat4"><a href="#portfolio">Portfolio</a> <div class="fleche"></div></td>
+					</tr>
+				</table>	
+						
+				<!--galerie-->
+				<div id="gallery">
+				
+					<figure class="images">
+						<img src="images/portfolio/01.jpg" alt="portfolio item 1" />
+						<figcaption>
+							<div class="cercle_bleu"><i class="fa fa-eye" aria-hidden="true"></i></div>
+							<h4>Lunettes-Man</h4>
+							<p>Site web d'un opticien.</p>
+						</figcaption>
+					</figure>	
+								
+					<figure class="images">
+						<img src="images/portfolio/02.jpg" alt="portfolio item 2" />
+						<figcaption>
+							<div class="cercle_bleu"><i class="fa fa-eye" aria-hidden="true"></i></div>
+							<h4>Rabbit Origami</h4>
+							<p>Une école d'origami réputée.</p>
+						</figcaption>
+					</figure>	
+								
+					<figure class="images">
+						<img src="images/portfolio/03.jpg" alt="portfolio item 3" />
+						<figcaption>
+							<div class="cercle_bleu"><i class="fa fa-eye" aria-hidden="true"></i></div>
+							<h4>Pompadour inc.</h4>
+							<p>Les Jeans de la Dame.</p>
+						</figcaption>
+					</figure>
+					
+					<figure class="images">
+						<img src="images/portfolio/04.jpg" alt="portfolio item 4" />
+						<figcaption>
+							<div class="cercle_bleu"><i class="fa fa-eye" aria-hidden="true"></i></div>
+							<h4>White Design &Co.</h4>
+							<p>Les designers qui mettent le blanc à l'honneur.</p>
+						</figcaption>
+					</figure>
+
+					<figure class="images">
+						<img src="images/portfolio/05.jpg" alt="portfolio item 5" />
+						<figcaption>
+							<div class="cercle_bleu"><i class="fa fa-eye" aria-hidden="true"></i></div>
+							<h4>Paper Bag</h4>
+							<p>Les spécialistes des sacs en papier.</p>
+						</figcaption>
+					</figure>	
+
+					<figure class="images">
+						<img src="images/portfolio/06.jpg" alt="portfolio item 6" />
+						<figcaption>
+							<div class="cercle_bleu"><i class="fa fa-eye" aria-hidden="true"></i></div>
+							<h4>Bridge Archi</h4>
+							<p>Fabricants de ponts</p>
+						</figcaption>
+					</figure>
+								
+					<figure class="images">
+						<img src="images/portfolio/07.jpg" alt="portfolio item 7" />
+						<figcaption>
+							<div class="cercle_bleu"><i class="fa fa-eye" aria-hidden="true"></i></div>
+							<h4>Space for All</h4>
+							<p>Le programme spatial pour tous !</p>
+						</figcaption>
+					</figure>
+					
+					<figure class="images">
+						<img src="images/portfolio/08.jpg" alt="portfolio item 8"/>
+						<figcaption>
+							<div class="cercle_bleu"><i class="fa fa-eye" aria-hidden="true"></i></div>
+							<h4>Desktop</h4>
+							<p>Comment ranger son bureau.</p>
+						</figcaption>
+					</figure>
+					
+				</div>
+						
+			</section>
+		
+			<!--carte, adresse et formulaire-->
+			<section class="section">
+			
+				<div class="marge_top">
+					<div id="contact_info"></div>
+				</div>	
+				
+				<!--carte-->
+				<div id="map">
+					
+					<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3120.710619093611!2d2.3462989940736363!3d48.873571040876215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e145ccb3091%3A0x9495beee8c96ec27!2s25+Rue+d&#39;Hauteville%2C+75010+Paris!5e0!3m2!1sfr!2sfr!4v1505743244596" width="100%" height="625" frameborder="0" style="border:0" allowfullscreen></iframe>
+				
+					<!--bloc contact-->
+					<div id="bloc_contact">
+						<div class="contenu_contact">
+							<div>
+								<h2>Contact Info</h2>
+								<p><span class="entreprise">WebAgency SAS</span> <br />
+								25 rue d'Hauteville 75010 PARIS <br />
+								<span class="tel">Tel:</span> 01 02 03 04 05</p>
+							</div>
+					
+							<div>
+								<form method="post" action="traitement.php">
+									<p><input class="text" type="text" name="Name" placeholder="Name*" required /></p>
+									<p><input class="mail" type="email" name="Email" placeholder="Email*" required /></p>
+									<p><input class="subject" type="text" name="Subject" placeholder="Subject" /></p>
+									<p><textarea class="textarea" name="Message" placeholder="Message*" rows="10" cols="30"></textarea></p>
+									<p><input class="bouton" type="submit" name="submit" value="Send Message" /></p>
+								</form>
+							</div>
+						</div>
+					</div>
+				
+				</div>		
+
+			</section>
+		</div>	
+	
+	</body>
+</html>
